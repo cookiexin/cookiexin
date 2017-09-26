@@ -1,0 +1,287 @@
+/******首页css*****/
+/*.main-header-wrapper {top: -120px;}*/
+/*.main-logo {display: none;}*/
+
+/*开头与页面刷新动画*/
+@keyframes refresh-mask{
+    from {width: 100%;}
+    to {width: 0;}
+}
+@-webkit-keyframes refresh-mask{
+    from {width: 100%;}
+    to {width: 0;}
+}
+@-moz-keyframes refresh-mask{
+    from {width: 100%;}
+    to {width: 0;}
+}
+@-o-keyframes refresh-mask{
+    from {width: 100%;}
+    to {width: 0;}
+}
+#refresh-mask {
+    position: absolute;
+    /*width: 100%;*/
+    height: 100%;
+    right: 0;
+    background-color: #F8FAFD;
+    z-index: 19;
+    animation: refresh-mask .8s ease both;
+    -webkit-animation: refresh-mask .8s ease both;
+    -moz-animation: refresh-mask .8s ease both;
+    -ms-animation: refresh-mask .8s ease both;
+    -o-animation: refresh-mask .8s ease both;
+}
+
+@keyframes refresh-header{
+    from {top: -150px;}
+    to {top: 0;}
+}
+@-webkit-keyframes refresh-header{
+    from {top: -150px;}
+    to {top: 0;}
+}
+@-moz-keyframes refresh-header{
+    from {top: -150px;}
+    to {top: 0;}
+}
+@-o-keyframes refresh-header{
+    from {top: -150px;}
+    to {top: 0;}
+}
+.main-header-wrapper{
+    animation: refresh-header .4s ease .4s both;
+    -webkit-animation: refresh-header .4s ease .4s both;
+    -moz-animation: refresh-header .4s ease .4s both;
+    -ms-animation: refresh-header .4s ease .4s both;
+    -o-animation: refresh-header .4s ease .4s both;
+}
+
+/*动态幻灯片(视频)模块*/
+#themeVideo,
+#themeVideoWhole {
+    width: 100%;
+    height: auto;
+    top: 0;
+}
+.theme-video {
+    /*margin-top: -5%;*/
+    margin-top: -70px;
+}
+.theme-videoWhole {
+    display: none;
+    position: absolute;
+    width: 100%;
+    z-index: 199;
+    opacity: 0;
+    -webkit-transition: all .6s cubic-bezier(0.7, 0, 1.0, 1.0);
+    -moz-transition: all .6s cubic-bezier(0.9, 0, 1.0, 1.0);
+    -ms-transition: all .6s cubic-bezier(0.9, 0, 1.0, 1.0);
+    -o-transition: all .6s cubic-bezier(0.9, 0, 1.0, 1.0);
+    transition: all .6s cubic-bezier(0.7, 0, 1.0, 1.0);
+}
+.themeVideo-mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* overflow: hidden;*/
+}
+.themeVideo-mask .item1,
+.themeVideo-mask .item2 {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 50%;
+    transform: skewY(-7deg);
+    z-index: 200;
+    background-color: black;
+    -webkit-transition: all .5s cubic-bezier(0.7, 0, 1.0, 1.0);
+    -moz-transition: all .5s cubic-bezier(0.7, 0, 1.0, 1.0);
+    -ms-transition: all .5s cubic-bezier(0.7, 0, 1.0, 1.0);
+    -o-transition: all .5s cubic-bezier(0.7, 0, 1.0, 1.0);
+    transition: all .5s cubic-bezier(0.7, 0, 1.0, 1.0);
+}
+.themeVideo-mask .item1 {
+    top: 51%;
+}
+.themeVideo-mask .item2 {
+
+}
+#home-deleteButton {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: 30px;
+    right: 50px;
+    background-color: rgba(255,255,255,.3);
+    border-radius: 50px;
+}
+#home-deleteButton:before,
+#home-deleteButton:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    left: 0;
+}
+#home-deleteButton:before,
+#home-deleteButton:after {
+    display: block;
+    position: absolute;
+    height: 3px;
+    top: 50%;
+    left: 10%;
+    border-radius: 2px;
+    font-size: 0;
+    line-height: 0;
+    background: rgba(255,255,255,.8);;
+    transition-duration: .2s;
+}
+#home-deleteButton:before {
+    transform:rotate(45deg);
+    -ms-transform:rotate(45deg);    /* IE 9 */
+    -moz-transform:rotate(45deg);   /* Firefox */
+    -webkit-transform:rotate(45deg); /* Safari 和 Chrome */
+    -o-transform:rotate(45deg);     /* Opera */
+}
+#home-deleteButton:after {
+    transform:rotate(135deg);
+    -ms-transform:rotate(135deg);   /* IE 9 */
+    -moz-transform:rotate(135deg);  /* Firefox */
+    -webkit-transform:rotate(135deg); /* Safari 和 Chrome */
+    -o-transform:rotate(135deg);    /* Opera */
+}
+
+#home-deleteButton:hover {
+    background-color: rgba(6,165,152,.7);
+    cursor: pointer;
+}
+
+#section-mask {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+#section-mask .item1,
+#section-mask .item2,
+#section-mask .item3,
+#section-mask .item4 {
+    position: absolute;
+    width: 100%;
+    height: 12vw;
+    /*background-color: #FAFCFF;*/
+    z-index: 20;
+    transform: skewY(-7deg);
+}
+#section-mask .item1 {}
+#section-mask .item2 {
+    top: 45vw;
+}
+#section-mask .item3 {
+    width: 20%;
+    transform: skewY(0deg);
+}
+#section-mask .item4 {
+    top: 45vw;
+    right: 0;
+    width: 50%;
+    height: 15vw;
+    transform: skewY(0deg);
+}
+
+#move-block {
+    position: relative;
+    width: 100%;
+    height: 51vw;
+    top: 0;
+    background-color: #FEA84A;
+}
+#boxgallery {
+
+}
+#move-block .move-panel {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
+    mix-blend-mode: multiply;
+}
+#move-block .move-panel.current {z-index: 9;}
+#move-block .move-panel.next { z-index: 5;}
+#move-block .bg-img img
+{
+    position: absolute;
+    width: 100%;
+    overflow:hidden;
+    -webkit-transition: all 1s linear;
+    -moz-transition: all 1s linear;
+    -ms-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    transition: all 1s linear;
+}
+
+#slide-controls {
+    text-align: center;
+    padding-top: 48%;
+}
+#slide-controls .control {
+    position: relative;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin: 3px;
+    border: 2px solid rgba(255,255,255,.8);
+    border-radius: 30px;
+    /*background-color: rgba(255,255,255,.8);*/
+    /*opacity: .8; */
+    z-index: 99;
+}
+#slide-controls .control.current {background-color: #F18B1E;}
+
+#home-playbutton {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    /*margin-top: -50px;*/
+    margin-left: -38px;
+    z-index: 100;
+}
+#home-playbutton:hover {cursor: pointer;}
+@media screen and (max-width: 1440px) {
+    #section-mask .item1 {
+        height: 173px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    #section-mask .item1 {
+        height: 150px;
+    }
+    #move-block {
+
+    }
+    .theme-video {
+        margin-top: -2vw;
+    }
+}
+@media screen and (max-width: 768px) {
+    #section-mask,
+    #footer-mask {
+        display: none;
+    }
+    .theme-video {
+        margin-top: 0;
+    }
+    #move-block {
+        height: 56vw;
+    }
+}
+@media screen and (max-width: 480px) {
+    #home-playbutton {
+        width: 60px;
+        top: 50%;
+        left: 50%;
+        margin-top: -30px;
+        margin-left: -30px;
+    }
+}

@@ -1,0 +1,94 @@
+
+<!--=== 整个宣传视频遮罩 ===-->
+<div class="themeVideo-mask">
+    <div class="item1"></div>
+    <div class="item2"></div>
+</div>
+
+<!--=== 整个宣传视频 ===-->
+<div class="theme-videoWhole">
+    <video id="themeVideoWhole" controls preload="auto" poster="images/slide03.jpg">
+        <source src="images/宣传片.mp4">
+        <source src="images/宣传片.ogg">
+    </video>
+    <div id="home-deleteButton" onclick="delete_play()">
+    </div>
+</div>
+
+<!--=== 视频遮罩 ===-->
+<div id="section-mask">
+    <div class="item1 lightGray-bg"></div>
+    <div class="item2 lightGray-bg"></div>
+    <div class="item3 lightGray-bg"></div>
+    <div class="item4 lightGray-bg"></div>
+</div>
+
+<!--=== 滚动图片/视频栏 ===-->
+<div id="move-block">
+    <div id="refresh-mask">
+    </div>
+    <div class="move-panel current">
+        <!-- <div class="bg-img">
+            <img class="" src="../images/slide03.jpg"></img>
+        </div> -->
+        <div class="theme-video">
+            <video id="themeVideo" preload="auto" autoplay poster="images/slide03.jpg" loop muted>
+                <source src="images/宣传片_短.mp4">
+                <source src="images/宣传片_短.ogg">
+                您的浏览器不支持video标签
+            </video>
+        </div>
+    </div>
+
+    <!-- 播放按键 -->
+    <img class="animated infinite jello" id="home-playbutton" src="images/home-play.png" onclick="play_video()">
+    <!-- 显示图片控件 -->
+    <!-- <div id="slide-controls">
+        <div>
+            <span class="control current"></span>
+            <span class="control"></span>
+            <span class="control"></span>
+            <span class="control"></span>
+        </div>
+    </div> -->
+</div>
+
+<script>
+    var video = $("#themeVideoWhole")[0];
+    function play_video(){
+        //mask展开
+        $(".themeVideo-mask").css("opacity", "1");
+        $(".themeVideo-mask").find(".item1").css("height","0");
+        $(".themeVideo-mask").find(".item1").css("transform","skewY(-7deg)");
+        $(".themeVideo-mask").find(".item1").css("top","51%");
+        $(".themeVideo-mask").find(".item2").css("height","0");
+        $(".themeVideo-mask").find(".item2").css("transform","skewY(-7deg)");
+
+        //视频出现
+        setTimeout(function(){
+            //还原mask
+            $(".themeVideo-mask").css("opacity", "0");
+            $("#inner-background").css("display","none");        //隐藏其余部分
+            $(".theme-videoWhole").css("display","block");
+            $(".theme-videoWhole").css("opacity","1");
+            video.play();
+        },600);
+    }
+    //删除按钮
+    function delete_play(){
+        $("#inner-background").css("display","block");
+
+        $(".themeVideo-mask").css("opacity", "1");
+        $(".themeVideo-mask").find(".item1").css("height","0");
+        $(".themeVideo-mask").find(".item1").css("transform","skewY(-7deg)");
+        $(".themeVideo-mask").find(".item1").css("top","51%");
+        $(".themeVideo-mask").find(".item2").css("height","0");
+        $(".themeVideo-mask").find(".item2").css("transform","skewY(-7deg)");
+
+        $(".theme-videoWhole").css("display","none");
+        // $("#themeVideoWhole").css("height","0");
+        // $("#themeVideoWhole").css("top","50%");
+        video.pause();
+        $(".theme-videoWhole").css("opacity","0");
+    }
+</script>

@@ -1,0 +1,87 @@
+/*****文字页面css*****/
+
+/***刷新动画***/
+@keyframes refresh-bgMask {
+    from {height: 1000px; top: -80px;}
+    to {height: 0; top: 900px;}
+}
+@-webkit-keyframes refresh-bgMask {
+    from {height: 1000px; top: -80px;}
+    to {height: 0; top: 900px;}
+}
+@-moz-keyframes refresh-bgMask {
+    from {height: 1000px; top: -80px;}
+    to {height: 0; top: 900px;}
+}
+@-o-keyframes refresh-bgMask {
+    from {height: 1000px; top: -80px;}
+    to {height: 0; top: 900px;}
+}
+#bg-mask {
+    animation: refresh-bgMask .5s;
+    -webkit-animation: refresh-bgMask .5s;
+    -moz-animation: refresh-bgMask .5s;
+    -o-animation: refresh-bgMask .5s;
+}
+@keyframes refresh-contentWrapper {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@-webkit-keyframes refresh-contentWrapper {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@-moz-keyframes refresh-contentWrapper {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@-o-keyframes refresh-contentWrapper {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+#content-wrapper{
+    animation: refresh-contentWrapper 1s .4s both;
+    -webkit-animation: refresh-contentWrapper 1s .4s both;
+    -moz-animation: refresh-contentWrapper 1s .4s both;
+    -o-animation: refresh-contentWrapper 1s .4s both;
+}
+
+
+#word-mask {
+    /* position: absolute;
+     top: 0;
+     width: 100%;*/
+}
+#word-mask .item1,
+#word-mask .item2 {
+    position: absolute;
+    width: 60%;
+    height: 12vw;
+    top: -2vw;
+    /*background-color: #FAFCFF;*/
+    z-index: 20;
+    transform: skewY(-21deg);
+}
+#word-mask .item2 {
+    width: 25%;
+    transform: skewY(0deg);
+}
+#bg-mask {
+    display: block;
+    position: absolute;
+    /*top: -80px;*/
+    width: 100%;
+    /*height: 1000px;*/
+    z-index: 39;
+    transform: skewY(5deg);
+    webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+@media screen and (max-width: 768px){
+    #word-mask{
+        display: none;
+    }
+}

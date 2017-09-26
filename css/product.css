@@ -1,0 +1,368 @@
+/*======产品页面css=======*/
+
+/***导航***/
+@keyframes product-nav-headerwrapper{
+    to {height: 0;}
+}
+@-webkit-keyframes product-headerwrapper{
+    /*from {height: 6vw;}*/
+    to {height: 0;}
+}
+@-moz-keyframes product-headerwrapper{
+    to {height: 0;}
+}
+@-o-keyframes product-headerwrapper{
+    to {height: 0;}
+}
+.product-page #header-wrapper{
+    height: 0;
+    animation: product-headerwrapper .5s;
+    -webkit-animation: product-headerwrapper .5s;
+    -moz-animation: product-headerwrapper .5s;
+    -o-animation: product-headerwrapper .5s;
+}
+
+@keyframes product-logo {
+    to {width: 60px;}
+}
+@-webkit-keyframes product-logo{
+    to {width: 60px;}
+}
+@-moz-keyframes product-logo {
+    to {width: 60px;}
+}
+@-o-keyframes product-logo {
+    to {width: 60px;}
+}
+.product-page #logo{
+    width: 60px;
+    margin-top: 0;
+    animation: product-logo .5s;
+    -webkit-animation: product-logo .5s;
+    -moz-animation: product-logo .5s;
+    -o-animation: product-logo .5s;
+}
+
+@keyframes product-nav {
+    to {padding: 0;}
+}
+@-webkit-keyframes product-nav {
+    to {padding: 0;}
+}
+@-moz-keyframes product-nav {
+    to {padding: 0;}
+}
+@-o-keyframes product-nav {
+    to {padding: 0;}
+}
+.product-page .nav {
+    padding: 0;
+    animation: product-nav .5s;
+    -webkit-animation: product-nav .5s;
+    -moz-animation: product-nav .5s;
+    -o-animation: product-nav .5s;
+}
+.product-page .logo-box{
+    margin-top: 15px;
+}
+.product-page .navbar{
+    min-height: 0;
+    margin-bottom: 0;
+}
+.product-page #cornerlabel{
+    display: none;
+}
+.product-page #footer-mask{
+    display: none;
+}
+/*子导航*/
+.sub-nav {
+    /*position: fixed;*/
+    float: right;
+    right: 0;
+    margin-top: 1.5%;
+    margin-right: 3%;
+}
+.sub-nav ul{
+    padding: 0;
+}
+.sub-nav ul li{
+    position: relative;
+    float: left;
+    margin-left: 10px;
+    list-style: none;
+}
+
+a.sub-nav-item {
+    display: block;
+    width: 50px;
+    height: 50px;
+    line-height: 13px;
+    padding: 12px;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-position: 50% 50%;
+    background-size: 100% auto;
+    color: white;
+    border: 0 solid #00B49B;
+    webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    border-radius: 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 10px;
+    font-family: libian;
+}
+.sub-nav-item:hover::before,
+.sub-nav-item.active::before {
+    border: 0 solid #FAFCFF;
+}
+.orange,
+.sub-nav-item:hover,
+.sub-nav-item.active{
+    background-color: #FF9A4C;
+}
+.sub-nav-item:hover::after,
+.sub-nav-item.active::after {
+    background-image: none;
+}
+.sub-nav-item:before,
+.sub-nav-item:after {
+    content: "";
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    left: 0;
+    background-position: 0 center;
+}
+.sub-nav-item:before {
+    /*border: 25px solid #00A598;*/
+    border: 25px solid #FAFCFF;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    border-radius: 25px;
+}
+.sub-nav-item:after {
+    left: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    border: 1px dashed #00B49B;
+    border-radius: 30px;
+    background-image: url("../images/icon-sprites.png");
+    background-size: 1000%;
+}
+
+.sub-product-content{
+    width: 100%;
+    height: 45vw;
+}
+#product-mask {
+
+}
+#product-content{
+    margin: 0;
+    padding: 0;
+}
+.product-img-hover {
+    position: absolute;
+    height: 0;
+    top: 10%;
+    bottom: 10%;
+    left: 10%;
+    right: 10%;
+    background-color: rgba(0,0,0,.5);
+    text-align: center;
+    transform: rotate(55deg);
+    -moz-transform: rotate(55deg);
+    -webkit-transform: rotate(55deg);
+    transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    overflow: hidden;
+    z-index: 10;
+    color: white;
+}
+#product-content li {
+    position: relative;
+    float: left;
+    width: 33.3%;
+    overflow: hidden;
+}
+/*#product-content li:hover .product-img {*/
+    /*transform: scale(1.1);*/
+    /*transition:all 0.5s ease;*/
+    /*-moz-transition:all 0.5s ease;*/
+    /*-webkit-transition:all 0.5s ease;*/
+    /*-o-transition:all 0.5s ease;*/
+/*}*/
+#product-content li:hover .product-img-hover {
+    height: 80%;
+
+    transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+}
+#product-content li:before,
+#product-content li:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: RGBA(242, 140, 29, .5);
+    transition:all 0.5s ease 0.3s;
+    -moz-transition:all 0.5s ease 0.3s;
+    -webkit-transition:all 0.5s ease 0.3s;
+    z-index: 100;
+}
+#product-content li:before{
+    top: 100%;
+    left: 0;
+    transform:rotate(55deg) translateX(60px);
+    -moz-transform:rotate(55deg) translateX(60px);
+    -webkit-transform:rotate(-35deg);
+    transform-origin:100% 0%;
+    -moz-transform-origin:100% 0%;
+    -webkit-transform-origin:100% 0%;
+    /*background-image: url(../images/二维码.jpg);*/
+    /*background-repeat: no-repeat;*/
+}
+#product-content li:after {
+    width: 25%;
+    height: 40%;
+    /*top: 135%;*/
+    right: -20%;
+    bottom: -80%;
+    background-color: transparent;
+    background-image: url(../images/二维码.jpg);
+    background-size: 85%;
+    background-repeat: no-repeat;
+}
+/*#product-content li:after {*/
+/*transform:rotate(55deg) translateX(-60px);*/
+/*-moz-transform:rotate(55deg) translateX(-60px);*/
+/*-webkit-transform:rotate(55deg) translateX(-60px);*/
+/*transform-origin:0% 100%;*/
+/*-moz-transform-origin:0% 100%;*/
+/*-webkit-transform-origin:0% 100%;*/
+/*}*/
+#product-content li:hover:before{
+    top: 20%;
+}
+#product-content li:hover:after{
+    right: 0;
+    bottom: 0;
+}
+.product-img {
+    width: 100%;
+}
+.product-erweima {
+    display: inline-block;
+    text-align: center;
+    margin-right: 1%;
+    height: 400px;
+}
+.product-erweima-img {
+    float: left;
+    margin: 5vw 2vw;
+}
+.product-erweima-word {
+    color: #231815;
+    font-size: 1.2em;
+}
+.product-erweima-word p {
+
+}
+@media screen and (min-width: 767px) and (max-width: 1199px){
+    .sub-nav ul li{
+        margin-top: 10%;
+        margin-left: 10px;
+    }
+    a.sub-nav-item {
+        width: 44px;
+        height: 44px;
+        padding: 10px;
+        webkit-border-radius: 22px;
+        -moz-border-radius: 22px;
+        -ms-border-radius: 22px;
+        border-radius: 22px;
+    }
+    .sub-nav-item:before {
+        webkit-border-radius: 22px;
+        -moz-border-radius: 22px;
+        -ms-border-radius: 22px;
+        border-radius: 22px;
+    }
+    .sub-nav-item:before,
+    .sub-nav-item:after {
+        width: 44px;
+        height: 44px;
+        border-radius: 22px;
+    }
+}
+@media screen and (max-width: 768px){
+    #product-content{
+        /*margin-top: 20px;*/
+    }
+    .sub-nav {
+        margin-top: 10px;
+        position: fixed;
+        bottom: 10px;
+        right: 0;
+        margin-right: 1%;
+        z-index: 99;
+    }
+    .sub-nav ul li {
+        list-style: none;
+        margin: 10px 0 0 5px;
+    }
+    .sub-product-content{
+        height: 100vw;
+    }
+    #product-content li {
+        width: 50%;
+    }
+    .product-img {
+        float: none;
+        width: 100%;
+    }
+    .product-erweima {
+        position: absolute;
+        width: 25%;
+        height: 36vw;
+        top: 0;
+        right: 0;
+        margin-right: 0;
+        background-color: #FAFCFF;
+    }
+    .product-erweima-img {
+        width: 80%;
+        margin-bottom: 2vw;
+    }
+    .product-erweima-word {
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 480px) {
+    .sub-product-content{
+        height: 380vw;
+    }
+    #product-content li {
+        width: 100%;
+    }
+}
